@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from weather import get_weather
 from datetime import datetime
 
-app = Flask("weather_tracker")
+app = Flask(__name__)
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -27,5 +27,5 @@ def index():
     )
 
 
-if "weather_tracker" == "__main__":
+if __name__ == "__main__":
     app.run(debug=True)

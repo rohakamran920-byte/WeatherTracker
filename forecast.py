@@ -1,5 +1,5 @@
 import requests
-from config import 783f3e4a29c03f4c1771332612657be2 , https://api.openweathermap.org/data/2.5/forecast
+from config import API_KEY, BASE_URL
 
 def get_forecast(city):
     """
