@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherTracker</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>🌦 WeatherTracker</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/forecast">Forecast</a>
+        <a href="/favorites">Favorites</a>
+    </nav>
+</header>
+
+<div class="container">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+<footer>
+    <p>© 2026 WeatherTracker | OSSD Project</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+```

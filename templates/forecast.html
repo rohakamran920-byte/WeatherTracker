@@ -1,0 +1,35 @@
+```html
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>5-Day Weather Forecast</h2>
+
+{% if forecast %}
+
+{% for day in forecast %}
+
+<div class="forecast-card">
+
+    <h3>{{ day.date }}</h3>
+
+    <img src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png">
+
+    <p>{{ day.description }}</p>
+
+    <p><strong>Min:</strong> {{ day.min_temp }} °C</p>
+
+    <p><strong>Max:</strong> {{ day.max_temp }} °C</p>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<p>No forecast available.</p>
+
+{% endif %}
+
+{% endblock %}
+```
